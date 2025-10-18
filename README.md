@@ -1,8 +1,8 @@
 # **Miti Pariwartan — Bikram Sambat (BS ↔ AD) Date Converter**
 
 
-### A lightweight, JSON-driven **Nepali Bikram Sambat (BS) ↔ Gregorian (AD)** date converter library for Node.js, browser, and TypeScript projects.  
-### Convert dates between English (AD) and Nepali (BS) — fully offline and easy to use.
+##### A lightweight, JSON-driven **Nepali Bikram Sambat (BS) ↔ Gregorian (AD)** date converter library for Node.js, browser, and TypeScript projects.  
+##### Convert dates between English (AD) and Nepali (BS) — fully offline and easy to use.
 ---
 
 ### ✨ Features
