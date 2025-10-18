@@ -1,10 +1,11 @@
-## Miti Pariwartan — Bikram Sambat (BS ↔ AD) Date Converter
+# **Miti Pariwartan — Bikram Sambat (BS ↔ AD) Date Converter**
 
+---
 A lightweight, JSON-driven **Nepali Bikram Sambat (BS) ↔ Gregorian (AD)** date converter library for Node.js, browser, and TypeScript projects.  
 Convert dates between English (AD) and Nepali (BS) — fully offline and easy to use.
 ---
 
-## ✨ Features
+### ✨ Features
 
 - 🔁 Convert **BS → AD** and **AD → BS**
 - 📅 Supports full Nepali calendar range (e.g., 2000 AD – 2099 AD / 2057–2099 BS) 
@@ -16,7 +17,7 @@ Convert dates between English (AD) and Nepali (BS) — fully offline and easy to
 
 ---
 
-## 📦 Installation
+### 📦 Installation
 
 Using **npm**:
 
@@ -32,9 +33,9 @@ yarn add miti-pariwartan
 ```
 ---
 
-## 📅 Usage Examples
+### Usage Examples
 
-### 🗓 Convert BS → AD
+#### 📆 Convert BS → AD
 
 ```ts
 import { bsToAd } from "miti-pariwartan";
@@ -61,7 +62,7 @@ Output Example (for '2082-06-31'): ⬇️
 }
 ```
 
-### 📅 Convert AD → BS
+#### 📅 Convert AD → BS
 ```ts
 import { adToBs } from "miti-pariwartan";
 
