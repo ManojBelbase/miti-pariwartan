@@ -6,7 +6,7 @@
 ### ✨ Features
 
 - 🔁 Convert **BS → AD** and **AD → BS**
-- ⚙️ 📅 Offline, JSON-based, TypeScript ready
+- ⚙️ Offline, JSON-based, TypeScript ready
 - 📦 Dual builds: **CommonJS (CJS)** + **ES Module (ESM)**
 - 🌐 Works in **Node.js**, **React**, **Next.js**, and **Vanilla JS**
 - 📅 Supports Nepali date range 2057–2090 BS
