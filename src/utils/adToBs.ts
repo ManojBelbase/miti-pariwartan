@@ -4,6 +4,7 @@ export function adToBs(adInput: string | Date): BSDate {
     const adDate: Date = typeof adInput === 'string' ? new Date(adInput) : adInput;
     if (isNaN(adDate.getTime())) throw new Error('Invalid AD date');
 
+
     const bsYearStr = getBSYear(adDate);
     const bsYear = parseInt(bsYearStr);
     const daysPassed = getDaysPassed(bsYearStr, adDate);

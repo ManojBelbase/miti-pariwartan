@@ -1,6 +1,6 @@
 {
   "name": "miti-pariwartan",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin @rollup/plugin-typescript",
@@ -14,13 +14,10 @@
     "@babel/preset-react": "^7.27.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-image": "^3.0.3",
-    "miti-pariwartan": "^1.0.1",
+    "miti-pariwartan": "^1.0.8",
     "react": "^17.0.0 || ^19.0.0",
     "react-dom": "^19.1.1",
     "rollup-plugin-postcss": "^4.0.2"
-  },
-  "peerDependencies": {
-    
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -46,7 +43,7 @@
   },
   "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter library for Node.js, React, and TypeScript. Convert dates, get weekday names in English & Nepali, fully offline, JSON-driven, and easy to use.",
   "module": "lib/index.esm.js",
-  "types": "types/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/",
     "types/",

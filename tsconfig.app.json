@@ -7,6 +7,10 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "miti-pariwartan": ["./src"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
