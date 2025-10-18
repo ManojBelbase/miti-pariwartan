@@ -1,6 +1,6 @@
 {
   "name": "miti-pariwartan",
-  "version": "1.0.8",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin @rollup/plugin-typescript",
@@ -41,24 +41,36 @@
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
   },
-  "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter library for Node.js, React, and TypeScript. Convert dates, get weekday names in English & Nepali, fully offline, JSON-driven, and easy to use.",
+  "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) tp Gregorian (AD) and vice versa date converter library for Node.js, React, and TypeScript projects. Convert dates, fully offline, JSON-driven, and easy to use.",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib/",
     "types/",
-    "README.md"
+    "README.md" 
   ],
-  "keywords": [
-    "nepali",
-    "bikram-sambat",
-    "bs-to-ad",
-    "ad-to-bs",
-    "date-converter",
-    "nepali-date",
-    "calendar",
-    "json-calendar"
-  ],
-  "author": "Manoj Belabse",
+ "keywords": [
+  "nepali-date",
+  "bikram-sambat",
+  "bs-to-ad",
+  "ad-to-bs",
+  "date-converter",
+  "nepali-calendar",
+  "bikram-sambat-calendar",
+  "date-conversion",
+  "calendar-converter",
+  "miti-pariwartan",
+  "javascript-library"
+],
+  "author": {
+    "name": "Manoj Belabse",
+    "email": "manojbelabse56@gmail.com",
+    "url": "https://github.com/manojbelabse"
+  },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/ManojBelbase/miti-pariwartan"
+  },
+    
   "license": "MIT"
 }
