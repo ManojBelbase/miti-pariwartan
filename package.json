@@ -1,10 +1,10 @@
 {
   "name": "miti-pariwartan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "dev": "rollup -c --watch",
-    "build": "rollup -c && tsc --declaration --emitDeclarationOnly --outDir types",
+    "build": "rollup -c --configPlugin @rollup/plugin-typescript",
+    "dev": "rollup -c --configPlugin @rollup/plugin-typescript --watch",
     "prepare": "npm run build",
     "lint": "eslint ."
   },
@@ -14,6 +14,7 @@
     "@babel/preset-react": "^7.27.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-image": "^3.0.3",
+    "miti-pariwartan": "^1.0.1",
     "react": "^17.0.0 || ^19.0.0",
     "react-dom": "^19.1.1",
     "rollup-plugin-postcss": "^4.0.2"
@@ -43,7 +44,7 @@
   "description": "JSON-driven AD to BS and BS to AD date converter for Bikram Sambat (Nepali calendar).",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
-  "types": "types/index.djs",
+  "types": "types/index.d.ts",
   "files": [
     "lib/",
     "types/",
