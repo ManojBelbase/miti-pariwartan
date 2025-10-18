@@ -1,10 +1,9 @@
 {
   "calendarInfo": {
     "title": "Bikram Sambat (BS) Calendar - Nepali Calendar",
-    "description": "Complete Nepali calendar data from 2000 AD to 2030 AD (2057 BS to 2086 BS)",
-    "note": "BS year is approximately 57 years ahead of AD. Year 2000 AD = 2057 BS",
-    "dataRange": "2057 BS to 2086 BS (2000 AD to 2030 AD)",
-    "lastUpdated": "2025-10-17"
+     "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter library for Node.js, React, and TypeScript. Convert dates, get weekday names in English & Nepali, fully offline, JSON-driven, and easy to use.",
+    "dataRange": "2057 to 64 BS to 2080 to 2084 BS ",
+    "lastUpdated": "2025-10-18"
   },
 
   "monthNames": [
