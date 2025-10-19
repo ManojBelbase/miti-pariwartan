@@ -8,7 +8,7 @@ This guide outlines how to get involved. Please follow these steps to ensure a s
 
 We adhere to the [Contributor Covenant Code of Conduct]([https://www.contributor-covenant.org/version/2/1/code_of_conduct](https://github.com/ManojBelbase/miti-pariwartan?tab=coc-ov-file)/). By participating in this project, you agree to uphold these standards. All interactions should be respectful and inclusive.
 
-If you encounter any violations, please report them to [your-email@example.com](mailto:manojbelbase56@gmail.com).
+If you encounter any violations, please report them to [manojbelbase56@gmail.com](mailto:manojbelbase56@gmail.com).
 
 ## Getting Started
 
