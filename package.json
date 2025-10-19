@@ -14,7 +14,7 @@
     "@babel/preset-react": "^7.27.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-image": "^3.0.3",
-    "miti-pariwartan": "^1.0.8",
+    "miti-pariwartan": "^1.1.0",
     "react": "^17.0.0 || ^19.0.0",
     "react-dom": "^19.1.1",
     "rollup-plugin-postcss": "^4.0.2"
@@ -47,30 +47,29 @@
   "files": [
     "lib/",
     "types/",
-    "README.md" 
+    "README.md"
   ],
- "keywords": [
-  "nepali-date",
-  "bikram-sambat",
-  "bs-to-ad",
-  "ad-to-bs",
-  "date-converter",
-  "nepali-calendar",
-  "bikram-sambat-calendar",
-  "date-conversion",
-  "calendar-converter",
-  "miti-pariwartan",
-  "javascript-library"
-],
+  "keywords": [
+    "nepali-date",
+    "bikram-sambat",
+    "bs-to-ad",
+    "ad-to-bs",
+    "date-converter",
+    "nepali-calendar",
+    "bikram-sambat-calendar",
+    "date-conversion",
+    "calendar-converter",
+    "miti-pariwartan",
+    "javascript-library"
+  ],
   "author": {
     "name": "Manoj Belabse",
     "email": "manojbelabse56@gmail.com",
     "url": "https://github.com/manojbelabse"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/ManojBelbase/miti-pariwartan"
   },
-    
   "license": "MIT"
 }
