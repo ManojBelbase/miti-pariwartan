@@ -6,7 +6,7 @@ function Test() {
       const ad = adToBs('2025-10-17');
       console.log('Ad to Bs conversion:', ad);
 
-      const bs = bsToAd('2093-12-30');
+      const bs = bsToAd('2095-12-30');
       console.log('Bs to Ad conversion:', bs.formatted);
 
       // Set the results to state
