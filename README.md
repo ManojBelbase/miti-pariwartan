@@ -1,4 +1,4 @@
-# **Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter**
+# ***Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter***
 
 ##### A lightweight, JSON-driven library to convert dates between English (AD) and Nepali (BS)
 ---
