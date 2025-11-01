@@ -27,3 +27,5 @@ types/
 *.njsproj
 *.sln
 *.sw?
+
+src/data/calendar.json
