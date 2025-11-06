@@ -1,6 +1,6 @@
 {
   "name": "miti-pariwartan",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin @rollup/plugin-typescript",
@@ -82,7 +82,7 @@
     "type": "git",
     "url": "https://github.com/ManojBelbase/miti-pariwartan"
   },
-   "bugs": {
+  "bugs": {
     "url": "https://github.com/ManojBelbase/miti-pariwartan/issues"
   },
   "license": "MIT"
