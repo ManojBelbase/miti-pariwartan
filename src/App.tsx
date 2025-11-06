@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      {ad.formatted.np}
+      {ad.formatted.standard}
     </div>
   )
 }

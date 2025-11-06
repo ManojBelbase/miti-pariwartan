@@ -7,7 +7,7 @@
 ### ✨ Features
 
 - 🔁 Convert **BS → AD** and **AD → BS**
-- ⚙️ ⚙️ Works offline, no API calls — data powered by local ***JSON***
+- ⚙️ Works offline, no API calls — data powered by local ***JSON***
 - 🌍 Returns both **English** and **Nepali** date formats
 - 🌐 Works in **Node.js**, **React**, **Next.js**, and **Vanilla JS**
 - 📦 Dual builds: **CommonJS (CJS)** + **ES Module (ESM)**
