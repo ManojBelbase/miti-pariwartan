@@ -28,4 +28,3 @@ types/
 *.sln
 *.sw?
 
-src/data/calendar.json
