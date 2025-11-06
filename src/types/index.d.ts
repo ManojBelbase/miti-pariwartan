@@ -12,28 +12,81 @@ export const nepaliWeekdayNames: readonly string[];
 export type WeekdayName = 'Sunday' | 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday';
 export type NepaliWeekdayName = 'Aaitabar' | 'Sombar' | 'Mangalbar' | 'Budhabar' | 'Bihibar' | 'Shukrabar' | 'Shanibar';
 
-export interface BSDate {
-    year: number;
-    month: number;
-    day: number;
-    formatted: string;
-    readable: string;
-    weekdayIndex: number;
-    weekdayName: WeekdayName;
-    nepaliWeekdayName: NepaliWeekdayName;
+
+
+export interface IBSDate {
+    input: string;
+
+    year: {
+        np: string;
+        en: string;
+    };
+
+    month: {
+        index: number;
+        np: string;
+        en: string;
+    };
+
+    day: {
+        np: string;
+        en: string;
+    };
+
+    week: {
+        index: number;
+        np: string;
+        en: string;
+    };
+
+
+
+    formatted: {
+        en: string;
+        np: string;
+        standard: string;
+    };
+
 }
 
-export interface ADDate {
-    year: number;
-    month: number;
-    day: number;
-    monthName: string;
-    formatted: string;
-    readable: string;
-    weekdayIndex: number;
-    weekdayName: WeekdayName;
-    nepaliWeekdayName: NepaliWeekdayName;
+
+export interface IADDate {
+    input: string;
+
+    year: {
+        np: string;
+        en: string;
+    };
+
+    month: {
+        index: number;
+        np: string;
+        en: string;
+    };
+
+    day: {
+        np: string;
+        en: string;
+    };
+
+    week: {
+        index: number;
+        np: string;
+        en: string;
+    };
+
+    formatted: {
+        en: string;
+        np: string;
+        standard: string;
+    };
 }
 
 export declare function adToBs(adInput: string | Date): BSDate;
 export declare function bsToAd(bsInput: string | { year: number; month: number; day: number }): ADDate;
+
+export interface CalendarData {
+    yearStart: Record<string, string>;
+    monthLengths: Record<string, number[]>;
+    monthNames: string[];
+}

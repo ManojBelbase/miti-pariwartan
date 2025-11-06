@@ -1,15 +1,17 @@
 # ***Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter***
 
-##### A lightweight, JSON-driven library to convert dates between English (AD) and Nepali (BS)
+##### Convert Nepali Bikram Sambat (BS) to Gregorian (AD) dates and vice versa, fully offline, using a simple and accurate JavaScript library.
+
 ---
 
 ### ✨ Features
 
 - 🔁 Convert **BS → AD** and **AD → BS**
-- ⚙️ Offline, JSON-based, TypeScript ready
-- 📦 Dual builds: **CommonJS (CJS)** + **ES Module (ESM)**
+- ⚙️ ⚙️ Works offline, no API calls — data powered by local ***JSON***
+- 🌍 Returns both **English** and **Nepali** date formats
 - 🌐 Works in **Node.js**, **React**, **Next.js**, and **Vanilla JS**
-- 📅 Supports Nepali date range 2057–2099 BS
+- 📦 Dual builds: **CommonJS (CJS)** + **ES Module (ESM)**
+- 📅 Supports Nepali date range 2057BS to 2099 BS
 ---
 
 ### 📦 Installation
@@ -28,61 +30,76 @@ yarn add miti-pariwartan
 ```
 ---
 
-### Usage Examples
+## 🚀 Usage Examples
 
-#### 📆 Convert BS → AD
-
+### 🗓️ Convert BS → AD
 ```ts
 import { bsToAd } from "miti-pariwartan";
 
 // Example 1
 const adDate1 = bsToAd("2082-07-01");
-console.log(adDate1.formatted); // Output: "2025-10-18"
+console.log(adDate1.formatted.standard);
+// Output: "2025-10-18"
 
 // Example 2
-const adDate2 = bsToAd('2082-06-31');
-console.log('BS → AD conversion:', adDate2);
+const adDate2 = bsToAd("2082-06-31");
+console.log("BS → AD conversion:", adDate2);
 
-Output Example (for '2082-06-31'): ⬇️
+Output Example (for 2082-06-31):
+
 {
-  "day": 17,
-  "formatted": "2025-10-17",
-  "month": 10,
-  "monthName": "October",
-  "nepaliWeekdayName": "Shukrabar",
-  "readable": "October 17, 2025",
-  "weekdayIndex": 5,
-  "weekdayName": "Friday",
-  "year": 2025
+  "input": "2082-06-31",
+  "year": { "en": "2025", "np": "२०२५" },
+  "month": { "index": 9, "en": "October", "np": "१०" },
+  "day": { "en": "17", "np": "१७" },
+  "week": { "index": 5, "en": "Friday", "np": "शुक्रबार" },
+  "formatted": {
+    "en": "2025 October 17, Friday",
+    "np": "२०२५ १० १७, शुक्रबार",
+    "standard": "2025-10-17"
+  }
 }
+
 ```
 
-#### 📅 Convert AD → BS
+### 🗓️ Convert AD → BS
+
 ```ts
 import { adToBs } from "miti-pariwartan";
 
 // Example 1
-const bsDate1 = adToBs("2025-10-17");
-console.log(bsDate1.formatted); // Output: "2082-06-31"
+const bsDate1 = adToBs("2025-10-18");
+console.log(bsDate1.formatted.standard);
+// Output: "2082-07-01"
 
 // Example 2
 const bsDate2 = adToBs("2025-10-18");
-console.log('AD → BS conversion:', bsDate2);
+console.log("AD → BS conversion:", bsDate2);
 
-Output Example (for '2025-10-17'): ⬇️
+Output Example (for 2025-10-17):
+
 {
-  "day": 31,
-  "formatted": "2082-06-31",
-  "month": 6,
-  "monthName": "Ashwin",
-  "nepaliWeekdayName": "Shukrabar",
-  "readable": "Ashwin 31, 2082",
-  "weekdayIndex": 5,
-  "weekdayName": "Friday",
-  "year": 2082
+  "input": "2025-10-17",
+  "year": { "en": "2082", "np": "२०८२" },
+  "month": { "index": 6, "en": "Ashwin", "np": "असोज" },
+  "day": { "en": "31", "np": "३१" },
+  "week": { "index": 5, "en": "Friday", "np": "शुक्रबार" },
+  "formatted": {
+    "en": "2082 Ashwin 31, Friday",
+    "np": "२०८२ ६ ३१, शुक्रबार",
+    "standard": "2082-06-31"
+  }
 }
 
+```
 
+### 🧩 Input Formats
 
-
-
+| Type                       | Example                             | Description                                                                        |
+| -------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
+| **String (dash)**          | `"2025-10-17"`                      | AD/BS date string using dashes (`YYYY-MM-DD`)                                      |
+| **String (slash)**         | `"2025/10/17"`                      | AD/BS date string using slashes (`YYYY/MM/DD`)                                     |
+| **Object (1-based month)** | `{ year: 2082, month: 6, day: 31 }` | Separate numeric fields (BS month starts at 1 = Baishakh, AD month at 1 = January) |
+| **Object (0-based month)** | `{ year: 2025, month: 9, day: 17 }` | Separate numeric fields (month starts at 0 = January)                              |
+| **Date Object**            | `new Date("2025-10-17")`            | Native JavaScript `Date` object (for AD only)                                      |
+| **Invalid Example ❌**      | `"3333/33/33"`                      | Throws error — invalid or out-of-range date                                        |

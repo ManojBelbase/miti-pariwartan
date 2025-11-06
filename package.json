@@ -1,6 +1,6 @@
 {
   "name": "miti-pariwartan",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "build": "rollup -c --configPlugin @rollup/plugin-typescript",
@@ -14,7 +14,7 @@
     "@babel/preset-react": "^7.27.1",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-image": "^3.0.3",
-    "miti-pariwartan": "^1.1.1",
+    "miti-pariwartan": "^1.1.4",
     "react": "^17.0.0 || ^19.0.0",
     "react-dom": "^19.1.1",
     "rollup-plugin-postcss": "^4.0.2"
@@ -41,7 +41,7 @@
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
   },
-  "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) tp Gregorian (AD) and vice versa date converter library for Node.js, React, and TypeScript projects. Convert dates, fully offline, JSON-driven, and easy to use.",
+  "description": "Miti Pariwartan — Lightweight and accurate Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter for Node.js, React, and TypeScript project. Convert dates, get weekdays, and format Nepali and English dates easily — all fully offline and JSON-driven.",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -49,30 +49,30 @@
     "types/",
     "README.md"
   ],
-  
-"keywords": [
-  "nepali-date",
-  "bikram-sambat",
-  "bs-to-ad",
-  "ad-to-bs",
-  "nepali-date-converter",
-  "bikram-sambat-calendar",
-  "date-converter",
-  "miti-pariwartan",
-  "nepali-calendar",
-  "date-conversion",
-  "bikram-sambat-to-ad",
-  "ad-to-bikram-sambat",
-  "nepali-date-utils",
-  "bs-calendar",
-  "nepali-date-library",
-  "nepali-date-js",
-  "typescript-date-library",
-  "nodejs-nepali-date",
-  "react-nepali-date",
-  "english-to-nepali-date"
-]
-,
+  "keywords": [
+    "nepali-date",
+    "bikram-sambat",
+    "bs-to-ad",
+    "ad-to-bs",
+    "nepali-date-converter",
+    "bikram-sambat-calendar",
+    "date-converter",
+    "miti-pariwartan",
+    "nepali-calendar",
+    "date-conversion",
+    "bikram-sambat-to-ad",
+    "ad-to-bikram-sambat",
+    "nepali-date-utils",
+    "bs-calendar",
+    "nepali-date-library",
+    "nepali-date-js",
+    "typescript-date-library",
+    "nodejs-nepali-date",
+    "react-nepali-date",
+    "english-to-nepali-date",
+    "nepali-date-format",
+    "convert-bs-to-ad"
+  ],
   "author": {
     "name": "Manoj Belabse",
     "email": "manojbelabse56@gmail.com",
@@ -81,6 +81,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ManojBelbase/miti-pariwartan"
+  },
+   "bugs": {
+    "url": "https://github.com/ManojBelbase/miti-pariwartan/issues"
   },
   "license": "MIT"
 }
