@@ -2,8 +2,8 @@
   "calendarInfo": {
     "title": "Bikram Sambat (BS) Calendar - Nepali Calendar",
      "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter library for Node.js, React, and TypeScript. Convert dates, get weekday names in English & Nepali, fully offline, JSON-driven, and easy to use.",
-    "dataRange": "2057 to 64 BS to 2080 to 2084 BS ",
-    "lastUpdated": "2025-10-18"
+    "dataRange": "2057 BS to 2099 BS ",
+    "lastUpdated": "2025-11-06"
   },
 
   "monthNames": [
