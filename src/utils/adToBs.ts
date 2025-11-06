@@ -1,6 +1,5 @@
 import { bsMonths } from "../constant/bsMonths";
 import { weekDays } from "../constant/weekDays";
-import { IBSDate } from "../types";
 import { toNepaliNumber } from "./dateUtils";
 import {
     getBSYear,
@@ -8,6 +7,7 @@ import {
     getBSMonthAndDay,
     getWeekdayFromAD,
 } from "./helpers";
+import { IBSDate } from "./types";
 
 export function adToBs(adInput: string | Date): IBSDate {
     // Step 1: Parse & Validate Input

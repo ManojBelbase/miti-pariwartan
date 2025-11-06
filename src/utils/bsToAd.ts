@@ -1,7 +1,7 @@
 import { engMonthNames } from "../constant";
-import { IADDate } from "../types";
 import { parseDate, addDays, getWeekdayFromAD, monthLengths, yearStart } from "./helpers";
 import { toNepaliNumber } from "./dateUtils";
+import { IADDate } from "./types";
 
 
 export function bsToAd(bsInput: string | { year: number; month: number; day: number }): IADDate {

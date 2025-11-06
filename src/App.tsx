@@ -1,4 +1,4 @@
-import { adToBs, bsToAd } from "./utils";
+import { adToBs, bsToAd } from "miti-pariwartan";
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      {ad.formatted.standard}
+      {ad.formatted.np}
     </div>
   )
 }
