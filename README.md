@@ -1,4 +1,4 @@
-# **** Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter****
+## Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter##
 
 ##### Convert Nepali Bikram Sambat (BS) to Gregorian (AD) dates and vice versa, fully offline, using a simple and accurate JavaScript library.
 
