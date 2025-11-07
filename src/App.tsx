@@ -5,16 +5,16 @@ function App() {
 
   // test
   const ad = adToBs("2002-03-17")
-  console.log('Ad to BS conversion:', ad);
+  // console.log('Ad to BS conversion:', ad);
 
 
-  const bs = bsToAd("2058/12/04")
-  // console.log('Bs to Ad conversion:', bs);
+  const bs = bsToAd("2082-06-31")
+  console.log('Bs to Ad conversion:', bs);
 
 
   return (
     <div>
-      {ad.formatted.np}
+      {bs.formatted.en}
     </div>
   )
 }

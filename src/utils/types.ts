@@ -1,4 +1,3 @@
-// src/utils/types.ts
 export interface IBSDate {
     input: string;
     year: { np: string; en: string };

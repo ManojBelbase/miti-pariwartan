@@ -1,4 +1,3 @@
-// src/utils/index.ts
 
 // === Core conversion functions ===
 export { adToBs } from './adToBs';
@@ -20,6 +19,6 @@ export {
 } from './helpers';
 
 // === Constants (if used externally) ===
-export { engMonthNames } from '../constant'; // adjust path if needed
+export { engMonthNames } from '../constant';
 export { bsMonths } from '../constant/bsMonths';
 export { weekDays } from '../constant/weekDays';

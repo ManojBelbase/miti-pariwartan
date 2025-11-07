@@ -1,4 +1,4 @@
-## Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter##
+## Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter
 
 ##### Convert Nepali Bikram Sambat (BS) to Gregorian (AD) dates and vice versa, fully offline, using a simple and accurate JavaScript library.
 
@@ -50,12 +50,12 @@ Output Example (for 2082-06-31):
 {
   "input": "2082-06-31",
   "year": { "en": "2025", "np": "२०२५" },
-  "month": { "index": 9, "en": "October", "np": "१०" },
+  "month": { "index": 9, "en": "October", "np": "अक्टूबर" },
   "day": { "en": "17", "np": "१७" },
   "week": { "index": 5, "en": "Friday", "np": "शुक्रबार" },
   "formatted": {
     "en": "2025 October 17, Friday",
-    "np": "२०२५ १० १७, शुक्रबार",
+    "np": "२०२५ अक्टूबर १७, शुक्रबार",
     "standard": "2025-10-17"
   }
 }
