@@ -1,4 +1,4 @@
-# ***Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter***
+# **** Miti Pariwartan — Bikram Sambat ↔ Gregorian Date Converter****
 
 ##### Convert Nepali Bikram Sambat (BS) to Gregorian (AD) dates and vice versa, fully offline, using a simple and accurate JavaScript library.
 
@@ -86,7 +86,7 @@ Output Example (for 2025-10-17):
   "week": { "index": 5, "en": "Friday", "np": "शुक्रबार" },
   "formatted": {
     "en": "2082 Ashwin 31, Friday",
-    "np": "२०८२ ६ ३१, शुक्रबार",
+    "np": "२०८२ असोज ३१, शुक्रबार",
     "standard": "2082-06-31"
   }
 }
@@ -95,11 +95,12 @@ Output Example (for 2025-10-17):
 
 ### 🧩 Input Formats
 
-| Type                       | Example                             | Description                                                                        |
-| -------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
-| **String (dash)**          | `"2025-10-17"`                      | AD/BS date string using dashes (`YYYY-MM-DD`)                                      |
-| **String (slash)**         | `"2025/10/17"`                      | AD/BS date string using slashes (`YYYY/MM/DD`)                                     |
-| **Object (1-based month)** | `{ year: 2082, month: 6, day: 31 }` | Separate numeric fields (BS month starts at 1 = Baishakh, AD month at 1 = January) |
-| **Object (0-based month)** | `{ year: 2025, month: 9, day: 17 }` | Separate numeric fields (month starts at 0 = January)                              |
-| **Date Object**            | `new Date("2025-10-17")`            | Native JavaScript `Date` object (for AD only)                                      |
-| **Invalid Example ❌**      | `"3333/33/33"`                      | Throws error — invalid or out-of-range date                                        |
+| Type                       | Example                               | Description                                                                               |
+| -------------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| **String (dash)**          | `"2025-10-17"`                        | AD/BS date string using dashes (`YYYY-MM-DD`).                                            |
+| **String (slash)**         | `"2025/10/17"`                        | AD/BS date string using slashes (`YYYY/MM/DD`).                                           |
+| **String (full date)**     | `"Fri Nov 07 2025 08:19:22 GMT+0545"` | Full JavaScript date string (AD only).                                                    |
+| **ISO String**             | `"2025-11-07T00:00:00Z"`              | ISO 8601 date string (AD only).                                                           |
+| **Object (1-based month)** | `{ year: 2082, month: 6, day: 31 }`   | Separate numeric fields. BS month starts at 1 = Baishakh, AD month starts at 1 = January. |
+| **Date Object**            | `new Date("2025-10-17")`              | Native JavaScript `Date` object (AD only).                                                |
+| **Invalid Example ❌**      | `"3333/33/33"`                        | Throws error — invalid, malformed, or out-of-range date.                                  |

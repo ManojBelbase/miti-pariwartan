@@ -1,20 +1,24 @@
-import { bsMonths } from "../constant/bsMonths";
-import { weekDays } from "../constant/weekDays";
+import { bsMonths, weekDays } from "../constant";
 import { toNepaliNumber } from "./dateUtils";
-import {
-    getBSYear,
-    getDaysPassed,
-    getBSMonthAndDay,
-    getWeekdayFromAD,
-} from "./helpers";
+import { getBSMonthAndDay, getBSYear, getDaysPassed, getWeekdayFromAD } from "./helpers";
 import { IBSDate } from "./types";
 
 export function adToBs(adInput: string | Date): IBSDate {
-    // Step 1: Parse & Validate Input
-    const adDate =
-        typeof adInput === "string"
-            ? new Date(adInput + "T00:00:00Z")
-            : adInput;
+    let adDate: Date;
+
+    if (adInput instanceof Date) {
+        adDate = adInput;
+    } else if (typeof adInput === "string") {
+        // Check if it matches YYYY-MM-DD format
+        if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(adInput)) {
+            adDate = new Date(adInput + "T00:00:00Z");
+        } else {
+            // Assume it is a full date string like "Fri Nov 07 2025 08:19:22 GMT+0545"
+            adDate = new Date(adInput);
+        }
+    } else {
+        throw new Error(`Invalid input type: ${adInput}`);
+    }
 
     if (isNaN(adDate.getTime())) {
         throw new Error(`Invalid AD date: ${adInput}`);
@@ -27,7 +31,6 @@ export function adToBs(adInput: string | Date): IBSDate {
     const week = getWeekdayFromAD(adDate);
 
     // Step 3: Localize Month & Weekday
-    // getBSMonthAndDay() gives 1-based month (1–12), so we subtract 1
     const monthIndex = month - 1;
     const monthObj = bsMonths.find((m) => m.index === monthIndex);
     if (!monthObj) throw new Error(`Invalid BS month index: ${monthIndex}`);

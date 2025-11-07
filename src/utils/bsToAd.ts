@@ -1,6 +1,6 @@
 import { engMonthNames } from "../constant";
 import { parseDate, addDays, getWeekdayFromAD, monthLengths, yearStart } from "./helpers";
-import { toNepaliNumber } from "./dateUtils";
+import { npEngMonthNames, toNepaliNumber } from "./dateUtils";
 import { IADDate } from "./types";
 
 
@@ -52,7 +52,7 @@ export function bsToAd(bsInput: string | { year: number; month: number; day: num
         month: {
             index: adMonth,
             en: engMonthNames[adMonth],
-            np: toNepaliNumber(adMonth + 1),
+            np: npEngMonthNames[adMonth],
         },
 
         day: {
@@ -68,8 +68,9 @@ export function bsToAd(bsInput: string | { year: number; month: number; day: num
 
         formatted: {
             en: `${adYear} ${engMonthNames[adMonth]} ${adDay}, ${weekday.weekdayName}`,
-            np: `${toNepaliNumber(adYear)} ${toNepaliNumber(adMonth + 1)} ${toNepaliNumber(adDay)}, ${weekday.nepaliWeekdayName}`,
+            np: `${toNepaliNumber(adYear)} ${npEngMonthNames[adMonth]} ${toNepaliNumber(adDay)}, ${weekday.nepaliWeekdayName}`,
             standard: `${adYear}-${String(adMonth + 1).padStart(2, "0")}-${String(adDay).padStart(2, "0")}`,
         },
+
     };
 }

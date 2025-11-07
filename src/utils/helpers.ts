@@ -1,4 +1,5 @@
 import data from '../data/calendar.json';
+import { nepaliWeekdayNames, weekdayNames } from './dateUtils';
 
 // --- Extract from JSON ---
 export const { yearStart, monthLengths, monthNames } = data as {
@@ -6,28 +7,8 @@ export const { yearStart, monthLengths, monthNames } = data as {
     monthLengths: Record<string, number[]>;
     monthNames: string[];
 };
-
-// --- Weekday constants ---
-export const weekdayNames = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'
-] as const;
 export type WeekdayName = typeof weekdayNames[number];
 
-export const nepaliWeekdayNames = [
-    'Aaitabar',
-    'Sombar',
-    'Mangalbar',
-    'Budhabar',
-    'Bihibar',
-    'Shukrabar',
-    'Shanibar'
-] as const;
 export type NepaliWeekdayName = typeof nepaliWeekdayNames[number];
 
 // --- Core helpers ---
