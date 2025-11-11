@@ -1,4 +1,4 @@
-import { ageDiffrence, calculateAge } from "./age";
+import { ageDifference, calculateAge } from "./age";
 import { bsToAd } from "./utils";
 
 
@@ -8,7 +8,7 @@ function App() {
   const age = calculateAge("2002-03-17")
   console.log(age, "age")
 
-  const diff = ageDiffrence("2002", '2025-12-04')
+  const diff = ageDifference("2002", '2025-12-04')
   console.log(diff, "diff")
 
 
