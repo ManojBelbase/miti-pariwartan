@@ -13,10 +13,14 @@ export type WeekdayName = 'Sunday' | 'Monday' | 'Tuesday' | 'Wednesday' | 'Thurs
 export type NepaliWeekdayName = 'Aaitabar' | 'Sombar' | 'Mangalbar' | 'Budhabar' | 'Bihibar' | 'Shukrabar' | 'Shanibar';
 
 
-
-
 export interface CalendarData {
     yearStart: Record<string, string>;
     monthLengths: Record<string, number[]>;
     monthNames: string[];
+}
+
+export interface IAge {
+    years: number;
+    months: number;
+    days: number;
 }

@@ -1,15 +1,20 @@
-import { adToBs, bsToAd } from "./utils";
+import { ageDiffrence, calculateAge } from "./age";
+import { bsToAd } from "./utils";
 
 
 function App() {
 
   // test
-  const ad = adToBs("2002-03-17")
-  // console.log('Ad to BS conversion:', ad);
+  const age = calculateAge("2002-03-17")
+  console.log(age, "age")
+
+  const diff = ageDiffrence("2002", '2025-12-04')
+  console.log(diff, "diff")
 
 
   const bs = bsToAd("2082-06-31")
-  console.log('Bs to Ad conversion:', bs);
+  // console.log('Bs to Ad conversion:', bs);
+
 
 
   return (
