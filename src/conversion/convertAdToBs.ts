@@ -1,36 +1,33 @@
-import { bsMonths, weekDays } from "../constant";
-import { toNepaliNumber } from "./dateUtils";
-import { getBSMonthAndDay, getBSYear, getDaysPassed, getWeekdayFromAD } from "./helpers";
-import { IBSDate } from "./types";
+import { bsMonths, toNepaliNumber, weekDays } from "../constant";
+import { parseADString } from "../formats/adFormats";
+import { IBSDate } from "../types";
+import { getBSMonthAndDay, getBSYear, getDaysPassed, getWeekdayFromAD } from "../utils";
 
-export function adToBs(adInput: string | Date): IBSDate {
+export function convertAdToBs(adInput: string | Date): IBSDate {
+    // 1. Normalise the input to a valid Date object
     let adDate: Date;
 
     if (adInput instanceof Date) {
         adDate = adInput;
     } else if (typeof adInput === "string") {
-        // Check if it matches YYYY-MM-DD format
-        if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(adInput)) {
-            adDate = new Date(adInput + "T00:00:00Z");
-        } else {
-            // Assume it is a full date string like "Fri Nov 07 2025 08:19:22 GMT+0545"
-            adDate = new Date(adInput);
-        }
+        const parsed = parseADString(adInput.trim());
+        if (!parsed) throw new Error(`Unable to parse AD date: "${adInput}"`);
+        adDate = parsed;
     } else {
-        throw new Error(`Invalid input type: ${adInput}`);
+        throw new Error(`Invalid input type: ${typeof adInput}`);
     }
 
-    if (isNaN(adDate.getTime())) {
+    if (Number.isNaN(adDate.getTime())) {
         throw new Error(`Invalid AD date: ${adInput}`);
     }
 
-    // Step 2: Convert AD → BS using calendar data
+    // 2. AD → BS conversion
     const bsYear = Number(getBSYear(adDate));
     const daysPassed = getDaysPassed(String(bsYear), adDate);
     const { month, day } = getBSMonthAndDay(String(bsYear), daysPassed);
     const week = getWeekdayFromAD(adDate);
 
-    // Step 3: Localize Month & Weekday
+    // 3. Localise month & weekday
     const monthIndex = month - 1;
     const monthObj = bsMonths.find((m) => m.index === monthIndex);
     if (!monthObj) throw new Error(`Invalid BS month index: ${monthIndex}`);
@@ -38,7 +35,7 @@ export function adToBs(adInput: string | Date): IBSDate {
     const weekObj = weekDays.find((w) => w.index === week.weekdayIndex);
     if (!weekObj) throw new Error(`Invalid weekday index: ${week.weekdayIndex}`);
 
-    // Step 4: Return structured BS date
+    // 4. Return structured result
     return {
         input: typeof adInput === "string" ? adInput : adDate.toISOString(),
 

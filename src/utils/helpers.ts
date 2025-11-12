@@ -1,7 +1,6 @@
+import { nepaliWeekdayNames, weekdayNames } from '../constant';
 import data from '../data/calendar.json';
-import { nepaliWeekdayNames, weekdayNames } from './dateUtils';
 
-// --- Extract from JSON ---
 export const { yearStart, monthLengths, monthNames } = data as {
     yearStart: Record<string, string>;
     monthLengths: Record<string, number[]>;

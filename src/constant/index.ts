@@ -1,3 +1,4 @@
 export { engMonthNames } from './engMonths'
-export { weekDays } from './weekDays'
 export { bsMonths } from './bsMonths'
+export { weekDays } from './weekDays'
+export { npEngMonthNames, nepaliWeekdayNames, weekdayNames, toNepaliNumber } from './nepaliDateUtils'

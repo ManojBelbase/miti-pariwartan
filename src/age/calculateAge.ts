@@ -1,22 +1,52 @@
-import { IAge } from "../types";
-import { IADDate } from "../utils/types";
+import { IADDate, IAge } from "../types";
 
-export function calculateAge(birth: string | IADDate, today?: string | IADDate): IAge {
-    const b = typeof birth === 'string' ? new Date(birth) : new Date(birth.input);
-    const t = today ? (typeof today === 'string' ? new Date(today) : new Date(today.input)) : new Date();
+export interface IAgeResult extends IAge {
+    message?: string;
+}
+
+export function calculateAge(
+    birth: string | IADDate,
+    today?: string | IADDate
+): IAgeResult | { message: string } {
+    const b = typeof birth === "string" ? new Date(birth) : new Date(birth.input);
+    const t = today
+        ? typeof today === "string"
+            ? new Date(today)
+            : new Date(today.input)
+        : new Date();
+
+    if (isNaN(b.getTime())) {
+        return { message: "Invalid birth date format." };
+    }
+    if (isNaN(t.getTime())) {
+        return { message: "Invalid current date format." };
+    }
+    if (b > t) {
+        return { message: "Birth date is in the future." };
+    }
 
     let years = t.getUTCFullYear() - b.getUTCFullYear();
     let months = t.getUTCMonth() - b.getUTCMonth();
     let days = t.getUTCDate() - b.getUTCDate();
 
-    if (days < 0) { months--; days += new Date(t.getUTCFullYear(), t.getUTCMonth(), 0).getUTCDate(); }
-    if (months < 0) { years--; months += 12; }
+    if (days < 0) {
+        months--;
+        const prevMonthDays = new Date(t.getUTCFullYear(), t.getUTCMonth(), 0).getUTCDate();
+        days += prevMonthDays;
+    }
 
-    return { years, months, days };
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    if (years < 0) {
+        return { message: "Invalid age calculation result." };
+    }
+
+    return {
+        years,
+        months,
+        days,
+    };
 }
-
-// export function calculateAgeBS(birth: string | IBSDate, today?: string | IBSDate): IAge {
-//     const adBirth = typeof birth === 'string' ? adToBs(birth) : adToBs(birth.input);
-//     const adToday = today ? (typeof today === 'string' ? adToBs(today) : adToBs(today.input)) : adToBs(new Date());
-//     return calculateAge(adBirth, adToday);
-// }

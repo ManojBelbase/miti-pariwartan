@@ -1,2 +1,2 @@
 export * from './calculateAge'
-export * from './difference'
+export * from './ageDifference'
