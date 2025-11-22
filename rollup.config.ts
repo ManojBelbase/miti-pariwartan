@@ -8,26 +8,43 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
   input: 'src/index.ts',
+
   output: [
+    // CommonJS (for Node.js, require())
     {
-      file: 'lib/index.js',
+      file: 'lib/index.cjs.js',
       format: 'cjs',
       sourcemap: true,
-      plugins: isProduction ? [terser()] : []
+      exports: 'named',
     },
+    // ESM (for import, modern tools)
     {
       file: 'lib/index.esm.js',
       format: 'esm',
       sourcemap: true,
-      plugins: isProduction ? [terser()] : []
-    }
+    },
+    // UMD (for CDN + <script> tag) ← THIS IS CRITICAL!
+    {
+      file: 'lib/index.umd.js',
+      format: 'umd',
+      name: 'mitiPariwartan',        // ← Global variable name in browser
+      sourcemap: true,
+    },
   ],
+
   plugins: [
-    json(),
-    resolve(),
-    commonjs(),
-    typescript({ tsconfig: './tsconfig.json' }),
-    isProduction && terser()
+    resolve(),           // Resolve node_modules (not needed here, but safe)
+    commonjs(),          // Convert CommonJS to ESM
+    json(),              // Allow importing JSON (your date data!)
+    typescript({
+      tsconfig: './tsconfig.json',
+      declaration: true,
+      declarationDir: 'lib',
+      outDir: 'lib',
+    }),
+    isProduction && terser(),  // Minify only in production
   ].filter(Boolean),
-  external: ['react', 'react-dom']
+
+  // Remove React from external — your library doesn't depend on React!
+  external: [],  // ← This was wrong before!
 };
