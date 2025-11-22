@@ -2,8 +2,8 @@ import { IADDate } from '../types';
 import { calculateAge, IAgeResult } from './calculateAge';
 
 export function calculateAgeDifference(
-    date1: string | IADDate,
-    date2?: string | IADDate
+    startDate: string | IADDate,
+    endDate?: string | IADDate
 ): IAgeResult | { message: string } {
-    return calculateAge(date1, date2);
+    return calculateAge(startDate, endDate);
 }

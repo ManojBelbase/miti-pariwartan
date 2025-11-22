@@ -1,5 +1,4 @@
 import { IADDate, IAge } from "../types";
-
 export interface IAgeResult extends IAge {
     message?: string;
 }

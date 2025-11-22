@@ -1,7 +1,46 @@
 src/
-tests/
-rollup.configjs
-tsconfig.json
-jest.configjs
-.gitignore
+examples/
+demo/
+public/
+dist/
+build/
 node_modules/
+
+# Configs
+# Build / Tooling configs
+rollup.config.*
+vite.config.*
+tsconfig.json
+tsconfig.*.json
+eslint.config.*
+.eslintrc*
+prettier.config.*
+prettier.*
+babel.config.*
+postcss.config.*
+jest.config.*
+
+
+# Environment
+.env*
+.vscode/
+.idea/
+
+# Node stuff
+node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tests
+*.test.*
+*.spec.*
+__tests__/
+coverage/
+
+# Anything unnecessary
+*.md.bak
+*.tmp
+*.cache

@@ -13,7 +13,6 @@ dist-ssr
 *.local
 node_modules/
 lib/
-types/
 *.tgz
 
 

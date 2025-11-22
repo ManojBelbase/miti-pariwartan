@@ -1,0 +1,58 @@
+{
+  "calendarInfo": {
+    "title": "Bikram Sambat (BS) Calendar - Nepali Calendar",
+    "description": "Miti Pariwartan: Lightweight Nepali Bikram Sambat (BS) ↔ Gregorian (AD) date converter library",
+    "dataRange": "2057 BS to 2099 BS",
+    "lastUpdated": "2025-11-06"
+  },
+  
+  "constants": {
+    "monthNames": [
+      "Baishakh", "Jestha", "Asar", "Shrawan", "Bhadra", 
+      "Ashoj", "Kartik", "Mangsir", "Poush", "Magh", "Falgun", "Chaitra"
+    ],
+    "weekdayNames": {
+      "en": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "ne": ["आइतबार", "सोमबार", "मङ्गलबार", "बुधबार", "बिहिबार", "शुक्रबार", "शनिबार"]
+    },
+    "yearOffset": 57,
+    "newYearMonthRange": [1, 4] 
+  },
+  
+  "yearData": {
+    "2057": {
+      "startDate": "2000-04-13",
+      "monthLengths": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+      "totalDays": 365
+    },
+    "2058": {
+      "startDate": "2001-04-14",
+      "monthLengths": [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+      "totalDays": 365
+    },
+    "2059": {
+      "startDate": "2002-04-14",
+      "monthLengths": [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+      "totalDays": 365
+    },
+    "2060": {
+      "startDate": "2003-04-14",
+      "monthLengths": [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
+      "totalDays": 365
+    },
+    "2061": {
+      "startDate": "2004-04-13",
+      "monthLengths": [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
+      "totalDays": 366
+    }
+  },
+  
+  "validation": {
+    "supportedYears": {
+      "min": 2057,
+      "max": 2099
+    },
+    "monthLengthRange": [29, 32],
+    "yearStartRange": ["04-13", "04-16"]
+  }
+}
