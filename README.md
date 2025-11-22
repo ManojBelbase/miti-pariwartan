@@ -30,6 +30,11 @@ Using **yarn**:
 yarn add miti-pariwartan
 ```
 
+Using **CDN**:
+```bash
+<script src="https://cdn.jsdelivr.net/npm/miti-pariwartan/lib/index.umd.js"></script>
+
+```
 ---
 
 ## 🚀 Usage Examples
@@ -70,7 +75,7 @@ console.log(diff);
 // → { years: 35, months: 5, days: 28 }
 ```
 
-### ⏳ fromNow() – Human Readable "Time Ago" / "In Future" (NEW!)
+### ⏳ fromNow() – Human Readable "Time Ago" / "In Future" 
 
 ```ts
 import { fromNow } from "miti-pariwartan";
