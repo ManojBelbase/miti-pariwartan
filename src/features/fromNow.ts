@@ -16,26 +16,27 @@ export function fromNow(input: string | Date): string {
     const label = (v: number, unit: string) =>
         isFuture ? `in ${v} ${unit}` : `${v} ${unit} ago`;
 
-    // #1: before 1 min → "a few seconds ago"
-    if (seconds < 60)
-        return isFuture ? "in a few seconds" : "a few seconds ago";
+    // Seconds
+    if (seconds < 20) return isFuture ? "in a moment" : "just now";
+    if (seconds < 60) return isFuture ? "in a few seconds" : "a few seconds ago";
 
-    // #2: 1–2 minutes → "1 minute ago"
-    if (minutes < 2)
-        return isFuture ? "in 1 minute" : "1 minute ago";
+    // Minutes
+    if (minutes === 1) return isFuture ? "in a minute" : "a minute ago";
+    if (minutes < 60) return label(minutes, "minutes");
 
-    // actual values after 2 minutes
-    if (minutes < 60)
-        return label(minutes, minutes === 1 ? "minute" : "minutes");
+    // Hours
+    if (hours === 1) return isFuture ? "in an hour" : "an hour ago";
+    if (hours < 24) return label(hours, "hours");
 
-    if (hours < 24)
-        return label(hours, hours === 1 ? "hour" : "hours");
+    // Days
+    if (days === 1) return isFuture ? "tomorrow" : "yesterday";
+    if (days < 30) return label(days, "days");
 
-    if (days < 30)
-        return label(days, days === 1 ? "day" : "days");
+    // Months
+    if (months === 1) return isFuture ? "in a month" : "a month ago";
+    if (months < 12) return label(months, "months");
 
-    if (months < 12)
-        return label(months, months === 1 ? "month" : "months");
-
-    return label(years, years === 1 ? "year" : "years");
+    // Years
+    if (years === 1) return isFuture ? "in a year" : "a year ago";
+    return label(years, "years");
 }

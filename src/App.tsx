@@ -8,8 +8,6 @@ function App() {
   const ageAd = calculateAge("2002-03-17");
   console.log(ageAd, "AD Age");  // { years: 23, months: 7, days: 27 }
 
-  const diff = calculateAgeDifference("2021", '2020')
-  // console.log(diff, "diff")
 
   const todayBs = convertAdToBs(new Date().toLocaleString("en-US", { timeZone: "Asia/Kathmandu" }));
   console.log("Today BS:", todayBs.formatted.standard);  // 2082-07-27
@@ -20,7 +18,7 @@ function App() {
   return (
     <div>
       {bs.formatted.en}
-      <>{fromNow(new Date())}</>
+      <>{fromNow('2023-9-13')}</>
     </div>
   )
 }
